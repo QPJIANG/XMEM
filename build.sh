@@ -7,6 +7,4 @@ if [ "$(id -u)" == "0" ];then
 fi
 
 
-echo "start"
-
-echo "current path: $0" 
+echo "start" 

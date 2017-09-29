@@ -1,8 +1,5 @@
 package demo.pqjiang.util;
 
-/**
- * Created by yangyibo on 17/2/7.
- */
 import java.security.MessageDigest;
 
 /**
@@ -41,7 +38,5 @@ public class MD5Util {
 
     public static void main(String[] args) {
         System.out.println(MD5Util.encode("test3"));
-
-
     }
 }

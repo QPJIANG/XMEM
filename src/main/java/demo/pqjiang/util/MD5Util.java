@@ -1,16 +1,17 @@
-package com.us.example.util;
+package demo.pqjiang.util;
 
 /**
  * Created by yangyibo on 17/2/7.
  */
 import java.security.MessageDigest;
+
 /**
  * MD5加密工具
  *
  */
 public class MD5Util {
 
-    private static final String SALT = "tamboo";
+    private static final String SALT = "qpjiangxxx";
 
     public static String encode(String password) {
         password = password + SALT;
@@ -39,7 +40,7 @@ public class MD5Util {
     }
 
     public static void main(String[] args) {
-        System.out.println(MD5Util.encode("abel"));
+        System.out.println(MD5Util.encode("test3"));
 
 
     }

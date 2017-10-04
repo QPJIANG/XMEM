@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  *  security user entity
- *
- *
  * */
 
 public class CustomUserDetails  implements UserDetails {

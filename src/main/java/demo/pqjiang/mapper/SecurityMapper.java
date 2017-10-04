@@ -1,16 +1,29 @@
 package demo.pqjiang.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-
 import java.util.List;
 import java.util.Map;
 
-@Mapper
 public interface SecurityMapper {
-    @Select("select * from user_info")
+    /**
+     * list all user
+     * */
     public List<Map> getUser();
 
-    @Select("select * from user_info where user_name=#{name}")
+    /**
+     * list user by name
+     *
+     * parameters: user_name
+     * */
     public List<Map> getUserByName(String name);
+    /**
+     * list user by name
+     *
+     * parameters: user_name
+     * */
+    public List<Map> getRolesByName(String name);
+    /**
+     * get all security uri for security conf
+     *
+     * */
+    public List<Map> getSecurityUri();
 }

@@ -11,6 +11,7 @@ import org.springframework.web.context.ServletContextAware;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 @Controller
@@ -19,6 +20,9 @@ public class BaseController implements ServletContextAware, InitializingBean, Me
 
     @Autowired
     protected HttpServletRequest request;
+
+    @Autowired
+    protected HttpServletResponse response;
 
     protected ServletContext servletContext;
 

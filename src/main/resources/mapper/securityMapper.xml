@@ -6,4 +6,13 @@
     <select id="getUser" resultMap="Map">
         SELECT * from user_info
     </select>
+    <select id="getUserByName" resultMap="Map">
+        select * from user_info where user_name=#{name}
+    </select>
+    <select id="getRolesByName" resultMap="Map">
+        select * from user_role where user_name=#{name}
+    </select>
+    <select id="getSecurityUri" resultMap="Map">
+        select * from security_role
+    </select>
 </mapper>

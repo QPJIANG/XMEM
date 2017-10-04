@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 public class IndexService {
     @Autowired
     public SecurityMapper securityMapper;
@@ -17,7 +17,13 @@ public class IndexService {
     public List<Map> UserList(){
         return securityMapper.getUser();
     }
+
     public List<Map> getUserByName(String userName){
         return securityMapper.getUserByName(userName);
     }
+
+    public List<Map> getRolesByName(String userName){
+        return securityMapper.getRolesByName(userName);
+    }
+
 }

@@ -14,10 +14,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by qiu on 17-9-27.
+ * some test json response
+ *
  */
 @RestController
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 public class IndexRestController  extends BaseController {
 
 

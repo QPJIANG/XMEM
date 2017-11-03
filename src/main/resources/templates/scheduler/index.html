@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/js/bootstrap/css/bootstrap.min.css"/>
+    <script src="js/jquery/jquery-3.1.1.js" type="text/javascript" language="javascript"></script>
+    <script src="js/bootstrap/js/bootstrap.js" type="text/javascript" language="javascript"></script>
+    <title>Scheduler</title>
+</head>
+<body>
+<div class="container">
+    <div th:include="common/header :: #common-head"></div>
+    Scheduler Main     <a th:href="@{/index}">index</a>
+    <div th:include="common/footer :: copyright"></div>
+</div>
+</body>
+</html>

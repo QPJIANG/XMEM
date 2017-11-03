@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- *  index
- *  login
- *  logout
- *  login error
- *
- * **/
+ * index
+ * login
+ * logout
+ * login error
+ **/
 
 
 @Controller
@@ -28,21 +27,21 @@ public class IndexPageController extends BaseController {
 
     /**
      * jump to index
-     * */
+     */
     @GetMapping("/")
     public String root() {
         return "redirect:/index";
     }
+
     /**
      * uri: index
      * return type: view
      * parameter: empty
-     *
-     * */
+     */
 
     @RequestMapping("/index")
-    public String index(Model model){
-        model.addAttribute("holder","qpjiang");
+    public String index(Model model) {
+        model.addAttribute("holder", "qpjiang");
         return "index";
     }
 
@@ -50,39 +49,31 @@ public class IndexPageController extends BaseController {
      * uri: login
      * return type: view
      * parameter: empty
-     *
-     * */
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String login(Model model){
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Model model) {
         return "login";
     }
-    @RequestMapping(value="/logout",method = RequestMethod.POST)
-    public void logout(Model model){
-        logger.info("logout");
+
+    @RequestMapping(value = "/logout")
+    public String logout(Model model) {
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
+        if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
-//        return "redirect:/login?logout";
+        return "redirect:/login";
     }
 
 
     /**
      * login error jump
-     *
-     * */
+     */
     @GetMapping("/login-error")
     public String loginError(Model model) {
         model.addAttribute("loginError", true);
         model.addAttribute("errorMsg", "登陆失败，用户名或者密码错误！");
         return "login";
-    }
-
-    @GetMapping("/view")
-    public String vies(Model model) {
-        model.addAttribute("loginError", true);
-        model.addAttribute("errorMsg", "登陆失败，用户名或者密码错误！");
-        return "users/view";
     }
 
 }

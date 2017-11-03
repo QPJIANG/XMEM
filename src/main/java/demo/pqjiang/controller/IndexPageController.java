@@ -57,13 +57,13 @@ public class IndexPageController extends BaseController {
         return "login";
     }
     @RequestMapping(value="/logout",method = RequestMethod.POST)
-    public String logout(Model model){
+    public void logout(Model model){
         logger.info("logout");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null){
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
-        return "redirect:/login?logout";
+//        return "redirect:/login?logout";
     }
 
 

@@ -1,3 +1,6 @@
+-- create user book with password 'book';
+-- create database book owner book encoding "utf-8";
+
 
 -- user base info
 CREATE  TABLE user_info(
